@@ -105,7 +105,7 @@ class Downloader(object):
         if not os.path.exists(self.logs_dir):
             os.makedirs(self.logs_dir)
 
-        for url1, url2 in itertools.izip_longest(self.dump_urls[::2],
+        for url1, url2 in itertools.zip_longest(self.dump_urls[::2],
                                                 self.dump_urls[1::2],
                                                 fillvalue=None):
             file_name1 = url1.split('/')[-1]
